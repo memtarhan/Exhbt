@@ -1,0 +1,6 @@
+framework module CBGPromise {
+  umbrella header "CBGPromise-umbrella.h"
+
+  export *
+  module * { export * }
+}
