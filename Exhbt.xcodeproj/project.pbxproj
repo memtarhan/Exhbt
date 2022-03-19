@@ -16,6 +16,14 @@
 		4309AE022489871900767F76 /* GalleryProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309AE012489871900767F76 /* GalleryProfileCell.swift */; };
 		4309AE042489A9CD00767F76 /* EditProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309AE032489A9CD00767F76 /* EditProfileController.swift */; };
 		4309AE06248AFD4900767F76 /* NewsfeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4309AE05248AFD4900767F76 /* NewsfeedInteractor.swift */; };
+		4333FC4727E6337F00B3BBEC /* FeedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC4127E6337F00B3BBEC /* FeedPresenter.swift */; };
+		4333FC4827E6337F00B3BBEC /* FeedRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC4227E6337F00B3BBEC /* FeedRouter.swift */; };
+		4333FC4927E6337F00B3BBEC /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC4327E6337F00B3BBEC /* FeedViewController.swift */; };
+		4333FC4A27E6337F00B3BBEC /* FeedInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC4427E6337F00B3BBEC /* FeedInteractor.swift */; };
+		4333FC4B27E6337F00B3BBEC /* FeedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC4527E6337F00B3BBEC /* FeedEntity.swift */; };
+		4333FC4C27E6337F00B3BBEC /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4333FC4627E6337F00B3BBEC /* FeedViewController.xib */; };
+		4333FC5327E635A000B3BBEC /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC5227E635A000B3BBEC /* ViewControllerFactory.swift */; };
+		4333FC5527E6361400B3BBEC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC5427E6361400B3BBEC /* Injectable.swift */; };
 		4352953C2571C0B000347033 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352953B2571C0B000347033 /* FollowersViewController.swift */; };
 		4352953F2571C1A900347033 /* FollowersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352953E2571C1A900347033 /* FollowersInteractor.swift */; };
 		43579FDB243E97CC0007EE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43579FDA243E97CC0007EE33 /* AppDelegate.swift */; };
@@ -121,6 +129,14 @@
 		4309AE012489871900767F76 /* GalleryProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryProfileCell.swift; sourceTree = "<group>"; };
 		4309AE032489A9CD00767F76 /* EditProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileController.swift; sourceTree = "<group>"; };
 		4309AE05248AFD4900767F76 /* NewsfeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsfeedInteractor.swift; sourceTree = "<group>"; };
+		4333FC4127E6337F00B3BBEC /* FeedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedPresenter.swift; sourceTree = "<group>"; };
+		4333FC4227E6337F00B3BBEC /* FeedRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedRouter.swift; sourceTree = "<group>"; };
+		4333FC4327E6337F00B3BBEC /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		4333FC4427E6337F00B3BBEC /* FeedInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedInteractor.swift; sourceTree = "<group>"; };
+		4333FC4527E6337F00B3BBEC /* FeedEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedEntity.swift; sourceTree = "<group>"; };
+		4333FC4627E6337F00B3BBEC /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
+		4333FC5227E635A000B3BBEC /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		4333FC5427E6361400B3BBEC /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
 		4352953B2571C0B000347033 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		4352953E2571C1A900347033 /* FollowersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersInteractor.swift; sourceTree = "<group>"; };
 		43579FD7243E97CC0007EE33 /* Exhbt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exhbt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,6 +258,36 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		4333FC3F27E6334200B3BBEC /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4333FC4027E6334E00B3BBEC /* Feed */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4333FC4027E6334E00B3BBEC /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				4333FC4527E6337F00B3BBEC /* FeedEntity.swift */,
+				4333FC4427E6337F00B3BBEC /* FeedInteractor.swift */,
+				4333FC4127E6337F00B3BBEC /* FeedPresenter.swift */,
+				4333FC4227E6337F00B3BBEC /* FeedRouter.swift */,
+				4333FC4327E6337F00B3BBEC /* FeedViewController.swift */,
+				4333FC4627E6337F00B3BBEC /* FeedViewController.xib */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		4333FC5127E6356E00B3BBEC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				4333FC5227E635A000B3BBEC /* ViewControllerFactory.swift */,
+				4333FC5427E6361400B3BBEC /* Injectable.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		43579FCE243E97CC0007EE33 = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +309,7 @@
 		43579FD9243E97CC0007EE33 /* Exhbt */ = {
 			isa = PBXGroup;
 			children = (
+				4333FC5127E6356E00B3BBEC /* Common */,
 				B073D147275ABE2F0075AFE2 /* Explore */,
 				D5A06CC82547BA95004BB7A2 /* Animations */,
 				D5A06CC325479B6A004BB7A2 /* CoreData */,
@@ -279,6 +326,7 @@
 				43BD512124613C910079B855 /* Notifications */,
 				43579FF8243EAA8B0007EE33 /* Profile */,
 				6E981F852463ABA200E98A7D /* Onboarding */,
+				4333FC3F27E6334200B3BBEC /* Screens */,
 				43579FF6243EAA7F0007EE33 /* DataModels.swift */,
 				43579FE5243E97CF0007EE33 /* LaunchScreen.storyboard */,
 				43579FE8243E97CF0007EE33 /* Info.plist */,
@@ -609,6 +657,7 @@
 			files = (
 				D5A06CCC2547BB73004BB7A2 /* PlusFiveCoins.json in Resources */,
 				43579FE7243E97CF0007EE33 /* LaunchScreen.storyboard in Resources */,
+				4333FC4C27E6337F00B3BBEC /* FeedViewController.xib in Resources */,
 				43BD512D2469F6880079B855 /* Assets.xcassets in Resources */,
 				D5A06CCD2547BB73004BB7A2 /* VoteAnimation.json in Resources */,
 				D574FF4924A5B5220052CF0F /* GoogleService-Info.plist in Resources */,
@@ -695,6 +744,7 @@
 				43065FCD24A68BD500121E3C /* NotificationInteractor.swift in Sources */,
 				D5716A5A25119B790007A35D /* Follow.swift in Sources */,
 				D552DD11248F3D4800A68A9C /* InvitationController.swift in Sources */,
+				4333FC5327E635A000B3BBEC /* ViewControllerFactory.swift in Sources */,
 				D574FF4724A436AE0052CF0F /* Notification.swift in Sources */,
 				4309AE022489871900767F76 /* GalleryProfileCell.swift in Sources */,
 				D500FE9B25B7B6ED00D812FD /* BlockInteractor.swift in Sources */,
@@ -719,6 +769,7 @@
 				6E6B044F2443EBD800FF896F /* UserManager.swift in Sources */,
 				D552DD0D248F391700A68A9C /* CustomImageView.swift in Sources */,
 				43BD512324613CB10079B855 /* NotificationController.swift in Sources */,
+				4333FC4A27E6337F00B3BBEC /* FeedInteractor.swift in Sources */,
 				43579FF1243EA4F00007EE33 /* CreateCompetitionController.swift in Sources */,
 				6E6B04482443E9FD00FF896F /* AuthController.swift in Sources */,
 				D5716A5825119AD50007A35D /* FollowRepo.swift in Sources */,
@@ -728,6 +779,7 @@
 				6EA151C9245F97140048C001 /* Label.swift in Sources */,
 				43579FEF243EA2560007EE33 /* TabBarController.swift in Sources */,
 				D52E05BA2551FF5C005BB884 /* CompetitionResultCell.swift in Sources */,
+				4333FC5527E6361400B3BBEC /* Injectable.swift in Sources */,
 				43BD510B245F9BC40079B855 /* GalleryViewController.swift in Sources */,
 				43BD5116245FB40B0079B855 /* CategoryCell.swift in Sources */,
 				43BD512F2469F9340079B855 /* CompetitionRepo.swift in Sources */,
@@ -739,11 +791,15 @@
 				43579FFD243EBB9B0007EE33 /* Utilities.swift in Sources */,
 				4309ADFE248986F700767F76 /* TopProfileCell.swift in Sources */,
 				6EA151C5245F83B30048C001 /* EmailPassController.swift in Sources */,
+				4333FC4B27E6337F00B3BBEC /* FeedEntity.swift in Sources */,
 				6E6B044C2443EAE600FF896F /* AuthRepository.swift in Sources */,
 				43BD51202461111A0079B855 /* UploadContainerView.swift in Sources */,
 				6EBD3AE1244E71CC00BF86EA /* AuthInteractor.swift in Sources */,
+				4333FC4727E6337F00B3BBEC /* FeedPresenter.swift in Sources */,
 				4309AE06248AFD4900767F76 /* NewsfeedInteractor.swift in Sources */,
+				4333FC4827E6337F00B3BBEC /* FeedRouter.swift in Sources */,
 				D51579B92536B0BB0093BC8C /* LeaderboardInteractor.swift in Sources */,
+				4333FC4927E6337F00B3BBEC /* FeedViewController.swift in Sources */,
 				D552DD03248C1F3800A68A9C /* DeepLinkBuilder.swift in Sources */,
 				43BD51252461F4870079B855 /* ImageCheckController.swift in Sources */,
 				D552DD07248C551F00A68A9C /* ProfileInteractor.swift in Sources */,
