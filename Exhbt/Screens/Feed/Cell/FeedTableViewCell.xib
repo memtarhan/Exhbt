@@ -19,28 +19,36 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ArT-4U-Obe" customClass="CardView" customModule="Exhbt" customModuleProvider="target">
-                        <rect key="frame" x="8" y="8" width="440" height="258"/>
+                        <rect key="frame" x="8" y="4" width="440" height="270"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pnn-1H-Q37">
-                                <rect key="frame" x="0.0" y="210" width="440" height="48"/>
+                                <rect key="frame" x="0.0" y="222" width="440" height="48"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="SeW-kO-wHP"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hic-iS-tpe">
+                                <rect key="frame" x="0.0" y="0.0" width="440" height="222"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Pnn-1H-Q37" firstAttribute="leading" secondItem="ArT-4U-Obe" secondAttribute="leading" id="64i-qm-yKb"/>
+                            <constraint firstAttribute="trailing" secondItem="Hic-iS-tpe" secondAttribute="trailing" id="Ez3-uJ-ubW"/>
+                            <constraint firstItem="Hic-iS-tpe" firstAttribute="top" secondItem="ArT-4U-Obe" secondAttribute="top" id="HZj-tA-xGF"/>
                             <constraint firstAttribute="trailing" secondItem="Pnn-1H-Q37" secondAttribute="trailing" id="MOy-cZ-x0l"/>
+                            <constraint firstItem="Pnn-1H-Q37" firstAttribute="top" secondItem="Hic-iS-tpe" secondAttribute="bottom" id="NoE-dZ-wtp"/>
+                            <constraint firstItem="Hic-iS-tpe" firstAttribute="leading" secondItem="ArT-4U-Obe" secondAttribute="leading" id="UMO-Q3-fcQ"/>
                             <constraint firstAttribute="bottom" secondItem="Pnn-1H-Q37" secondAttribute="bottom" id="bgU-zB-UvO"/>
                         </constraints>
                     </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="ArT-4U-Obe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="2Pf-Sw-Qnu"/>
-                    <constraint firstAttribute="bottom" secondItem="ArT-4U-Obe" secondAttribute="bottom" constant="20" id="aVi-iB-RSf"/>
+                    <constraint firstItem="ArT-4U-Obe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="2Pf-Sw-Qnu"/>
+                    <constraint firstAttribute="bottom" secondItem="ArT-4U-Obe" secondAttribute="bottom" constant="12" id="aVi-iB-RSf"/>
                     <constraint firstItem="ArT-4U-Obe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="kva-dy-CDi"/>
                     <constraint firstAttribute="trailing" secondItem="ArT-4U-Obe" secondAttribute="trailing" constant="8" id="u4t-fI-WZu"/>
                 </constraints>
@@ -48,15 +56,13 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="imagesStackView" destination="Hic-iS-tpe" id="BP4-Pg-Qaz"/>
                 <outlet property="statusContainerView" destination="Pnn-1H-Q37" id="FL8-q0-aUu"/>
             </connections>
             <point key="canvasLocation" x="236.23188405797103" y="109.82142857142857"/>
         </tableViewCell>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

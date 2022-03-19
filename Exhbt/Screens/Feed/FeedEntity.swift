@@ -12,6 +12,7 @@ struct FeedEntity {
     struct Feed {
         struct ViewModel {
             let id: String
+            let images: [UIImage?]
         }
     }
 }

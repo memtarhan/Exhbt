@@ -62,7 +62,12 @@ class FeedPresenterImpl: FeedPresenter {
         }
 
         let viewModels = feeds.map { repo -> FeedEntity.Feed.ViewModel in
-            FeedEntity.Feed.ViewModel(id: repo.id)
+            let random = Int.random(in: 1 ..< 6)
+            var images = [UIImage?]()
+            (1 ... random).forEach { index in
+                images.append(UIImage(named: "image (\(index))"))
+            }
+            return FeedEntity.Feed.ViewModel(id: repo.id, images: images)
         }
         snapshot.appendItems(viewModels, toSection: "")
         diffableDataSource?.apply(snapshot, animatingDifferences: true)

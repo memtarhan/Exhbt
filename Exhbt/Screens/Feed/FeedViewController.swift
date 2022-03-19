@@ -20,7 +20,7 @@ class FeedViewControllerImpl: UIViewController {
 
     private var cancellables: Set<AnyCancellable> = []
 
-    private let rowHeight: CGFloat = 360
+    private let rowHeight: CGFloat = 280
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,8 +68,7 @@ class FeedViewControllerImpl: UIViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell
             else { return UITableViewCell() }
 
-            // TODO: Configure cell
-            cell.textLabel?.text = model.id
+            cell.configure(model)
 
             return cell
         }
