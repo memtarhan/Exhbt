@@ -6,6 +6,7 @@
 //  Copyright © 2022 Exhbt LLC. All rights reserved.
 //
 
+import Combine
 import UIKit
 
 protocol FeedViewController: Injectable {
@@ -14,6 +15,12 @@ protocol FeedViewController: Injectable {
 
 class FeedViewControllerImpl: UIViewController {
     var presenter: FeedPresenter?
+
+    @IBOutlet var tableView: UITableView!
+
+    private var cancellables: Set<AnyCancellable> = []
+
+    private let rowHeight: CGFloat = 360
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,10 +41,50 @@ class FeedViewControllerImpl: UIViewController {
     }
 
     private func setup() {
+        let cell = UINib(nibName: FeedTableViewCell.nibIdentifier, bundle: nil)
+        tableView.register(cell, forCellReuseIdentifier: FeedTableViewCell.reuseIdentifier)
+
+        tableView.rowHeight = rowHeight
+        tableView.delegate = self
+
+        presenter?.triggerPublisher
+            .receive(on: RunLoop.main)
+            .sink { _ in
+            }.store(in: &cancellables)
+
+        presenter?.fetchCompletionPublisher
+            .receive(on: RunLoop.main)
+            .sink { result in
+                if result {
+                    // TODO: Implement stop loading indicator
+
+                } else {
+                    // TODO: Implement start loading indicator
+                }
+
+            }.store(in: &cancellables)
+
+        presenter?.diffableDataSource = FeedsTableViewDiffableDataSource(tableView: tableView) { (tableView, indexPath, model) -> UITableViewCell? in
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell
+            else { return UITableViewCell() }
+
+            // TODO: Configure cell
+            cell.textLabel?.text = model.id
+
+            return cell
+        }
     }
 }
 
 // MARK: - FeedViewController
 
 extension FeedViewControllerImpl: FeedViewController {
+}
+
+// MARK: - UITableViewDelegate
+
+extension FeedViewControllerImpl: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // TODO: Implement selection
+    }
 }

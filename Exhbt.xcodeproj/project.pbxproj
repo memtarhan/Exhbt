@@ -24,6 +24,8 @@
 		4333FC4C27E6337F00B3BBEC /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4333FC4627E6337F00B3BBEC /* FeedViewController.xib */; };
 		4333FC5327E635A000B3BBEC /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC5227E635A000B3BBEC /* ViewControllerFactory.swift */; };
 		4333FC5527E6361400B3BBEC /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC5427E6361400B3BBEC /* Injectable.swift */; };
+		4333FC5927E63C4000B3BBEC /* FeedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4333FC5727E63C4000B3BBEC /* FeedTableViewCell.swift */; };
+		4333FC5A27E63C4000B3BBEC /* FeedTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4333FC5827E63C4000B3BBEC /* FeedTableViewCell.xib */; };
 		4352953C2571C0B000347033 /* FollowersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352953B2571C0B000347033 /* FollowersViewController.swift */; };
 		4352953F2571C1A900347033 /* FollowersInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4352953E2571C1A900347033 /* FollowersInteractor.swift */; };
 		43579FDB243E97CC0007EE33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43579FDA243E97CC0007EE33 /* AppDelegate.swift */; };
@@ -137,6 +139,8 @@
 		4333FC4627E6337F00B3BBEC /* FeedViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedViewController.xib; sourceTree = "<group>"; };
 		4333FC5227E635A000B3BBEC /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
 		4333FC5427E6361400B3BBEC /* Injectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		4333FC5727E63C4000B3BBEC /* FeedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewCell.swift; sourceTree = "<group>"; };
+		4333FC5827E63C4000B3BBEC /* FeedTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedTableViewCell.xib; sourceTree = "<group>"; };
 		4352953B2571C0B000347033 /* FollowersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersViewController.swift; sourceTree = "<group>"; };
 		4352953E2571C1A900347033 /* FollowersInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersInteractor.swift; sourceTree = "<group>"; };
 		43579FD7243E97CC0007EE33 /* Exhbt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Exhbt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -269,6 +273,7 @@
 		4333FC4027E6334E00B3BBEC /* Feed */ = {
 			isa = PBXGroup;
 			children = (
+				4333FC5627E63C2E00B3BBEC /* Cell */,
 				4333FC4527E6337F00B3BBEC /* FeedEntity.swift */,
 				4333FC4427E6337F00B3BBEC /* FeedInteractor.swift */,
 				4333FC4127E6337F00B3BBEC /* FeedPresenter.swift */,
@@ -286,6 +291,15 @@
 				4333FC5427E6361400B3BBEC /* Injectable.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		4333FC5627E63C2E00B3BBEC /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4333FC5727E63C4000B3BBEC /* FeedTableViewCell.swift */,
+				4333FC5827E63C4000B3BBEC /* FeedTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		43579FCE243E97CC0007EE33 = {
@@ -660,6 +674,7 @@
 				4333FC4C27E6337F00B3BBEC /* FeedViewController.xib in Resources */,
 				43BD512D2469F6880079B855 /* Assets.xcassets in Resources */,
 				D5A06CCD2547BB73004BB7A2 /* VoteAnimation.json in Resources */,
+				4333FC5A27E63C4000B3BBEC /* FeedTableViewCell.xib in Resources */,
 				D574FF4924A5B5220052CF0F /* GoogleService-Info.plist in Resources */,
 				D5A06CCE2547BB73004BB7A2 /* MinusFiveCoins.json in Resources */,
 			);
@@ -795,6 +810,7 @@
 				6E6B044C2443EAE600FF896F /* AuthRepository.swift in Sources */,
 				43BD51202461111A0079B855 /* UploadContainerView.swift in Sources */,
 				6EBD3AE1244E71CC00BF86EA /* AuthInteractor.swift in Sources */,
+				4333FC5927E63C4000B3BBEC /* FeedTableViewCell.swift in Sources */,
 				4333FC4727E6337F00B3BBEC /* FeedPresenter.swift in Sources */,
 				4309AE06248AFD4900767F76 /* NewsfeedInteractor.swift in Sources */,
 				4333FC4827E6337F00B3BBEC /* FeedRouter.swift in Sources */,

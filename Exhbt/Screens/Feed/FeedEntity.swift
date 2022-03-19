@@ -9,4 +9,20 @@
 import UIKit
 
 struct FeedEntity {
+    struct Feed {
+        struct ViewModel {
+            let id: String
+        }
+    }
+}
+
+/// - to confirm UITableViewDiffableDataSource
+extension FeedEntity.Feed.ViewModel: Hashable {
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: FeedEntity.Feed.ViewModel, rhs: FeedEntity.Feed.ViewModel) -> Bool {
+        return lhs.id == rhs.id
+    }
 }
