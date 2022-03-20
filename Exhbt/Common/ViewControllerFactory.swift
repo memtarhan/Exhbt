@@ -22,4 +22,10 @@ class ViewControllerFactory {
         view.injectDependencies()
         return view
     }
+
+    weak var categoryFeed: CategoryFeedViewController? {
+        let view: CategoryFeedViewController = CategoryFeedViewControllerImpl(nibName: "CategoryFeedViewController", bundle: nil)
+        view.injectDependencies()
+        return view
+    }
 }

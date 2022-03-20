@@ -83,6 +83,7 @@ class FeedViewControllerImpl: UIViewController {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: FeedTableViewCell.reuseIdentifier, for: indexPath) as? FeedTableViewCell
             else { return UITableViewCell() }
 
+            cell.delegate = self
             cell.configure(model)
 
             return cell
@@ -100,5 +101,13 @@ extension FeedViewControllerImpl: FeedViewController {
 extension FeedViewControllerImpl: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         presenter?.presentDetails()
+    }
+}
+
+// MARK: - FeedTableViewCellDelegate
+
+extension FeedViewControllerImpl: FeedTableViewCellDelegate {
+    func feedTableViewCell(didSelectCategory category: Category) {
+        presenter?.present(category: category)
     }
 }

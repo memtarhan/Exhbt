@@ -34,6 +34,7 @@
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdr-gI-i4I">
                                                 <rect key="frame" x="12" y="5" width="151" height="14.5"/>
+                                                <gestureRecognizers/>
                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
                                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
@@ -127,6 +128,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="categoryLabel" destination="hdr-gI-i4I" id="tNk-HS-eSF"/>
                 <outlet property="categoryView" destination="M61-h7-LPZ" id="NCS-8M-64c"/>
                 <outlet property="containerView" destination="ArT-4U-Obe" id="m1t-6p-Fpd"/>
                 <outlet property="imagesStackView" destination="Hic-iS-tpe" id="BP4-Pg-Qaz"/>

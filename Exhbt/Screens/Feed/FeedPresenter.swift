@@ -19,6 +19,8 @@ protocol FeedPresenter: AnyObject {
     var diffableDataSource: FeedsTableViewDiffableDataSource? { get set }
 
     func presentDetails()
+    func present(category: Category)
+    func presentCategory(at indexPath: IndexPath)
 }
 
 class FeedPresenterImpl: FeedPresenter {
@@ -35,6 +37,8 @@ class FeedPresenterImpl: FeedPresenter {
     var diffableDataSource: FeedsTableViewDiffableDataSource?
     var snapshot = NSDiffableDataSourceSnapshot<String?, FeedEntity.Feed.ViewModel>()
 
+    private var feeds = [FeedEntity.Feed.ViewModel]()
+
     init() {
         triggerPublisher.receive(on: RunLoop.main).debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { _ in
@@ -48,6 +52,17 @@ class FeedPresenterImpl: FeedPresenter {
 
     func presentDetails() {
         router?.navigateToDetails()
+    }
+
+    func present(category: Category) {
+        router?.navigateTo(category: category)
+    }
+
+    func presentCategory(at indexPath: IndexPath) {
+        if let title = feeds[indexPath.row].category,
+           let category = Category(rawValue: title) {
+            router?.navigateTo(category: category)
+        }
     }
 
     private func fetchFeeds() {
@@ -67,7 +82,7 @@ class FeedPresenterImpl: FeedPresenter {
             return
         }
 
-        let viewModels = feeds.map { repo -> FeedEntity.Feed.ViewModel in
+        let viewModels = feeds.map { feed -> FeedEntity.Feed.ViewModel in
             let random = Int.random(in: 3 ... 6)
 
             var images = [String]()
@@ -75,13 +90,48 @@ class FeedPresenterImpl: FeedPresenter {
                 let index = Int.random(in: 1 ... 11)
                 images.append("image (\(index))")
             }
-            return FeedEntity.Feed.ViewModel(id: repo.id,
+
+            let categories = Category.all
+            let catIndex = Int.random(in: 0 ..< categories.count)
+            let category = categories[catIndex]
+
+            return FeedEntity.Feed.ViewModel(id: feed.id,
                                              images: images,
                                              voted: random % 2 == 0,
-                                             voteCount: random * 4)
+                                             voteCount: random * 4,
+                                             category: category.title)
         }
+
+        self.feeds = viewModels
+
         snapshot.appendItems(viewModels, toSection: "")
         diffableDataSource?.apply(snapshot, animatingDifferences: true)
+    }
+
+    private func retrieveViewModels(from feeds: [FeedResponse]) -> [FeedEntity.Feed.ViewModel] {
+        let viewModels = feeds.map { feed -> FeedEntity.Feed.ViewModel in
+            let random = Int.random(in: 3 ... 6)
+
+            var images = [String]()
+            (0 ... random).forEach { _ in
+                let index = Int.random(in: 1 ... 11)
+                images.append("image (\(index))")
+            }
+
+            let categories = Category.all
+            let catIndex = Int.random(in: 0 ..< categories.count)
+            let category = categories[catIndex]
+
+            return FeedEntity.Feed.ViewModel(id: feed.id,
+                                             images: images,
+                                             voted: random % 2 == 0,
+                                             voteCount: random * 4,
+                                             category: category.title)
+        }
+
+        self.feeds = viewModels
+
+        return viewModels
     }
 }
 

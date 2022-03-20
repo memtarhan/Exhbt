@@ -15,6 +15,7 @@ struct FeedEntity {
             let images: [String]
             let voted: Bool
             let voteCount: Int?
+            let category: String?
         }
     }
 }

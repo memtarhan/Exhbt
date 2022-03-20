@@ -12,15 +12,20 @@ class FeedTableViewCell: UITableViewCell {
     static let reuseIdentifier = "Feed"
     static let nibIdentifier = "FeedTableViewCell"
 
+    var delegate: FeedTableViewCellDelegate?
+
     @IBOutlet var containerView: CardView!
     @IBOutlet var imagesStackView: UIStackView!
     @IBOutlet var categoryView: UIView!
+    @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var statusView: UIView!
     @IBOutlet var voteStatusContainerView: UIView!
     @IBOutlet var voteStatusImageView: UIImageView!
     @IBOutlet var voteStatusLabel: UILabel!
 
     static let cornerRadius: CGFloat = 24
+
+    private var model: FeedEntity.Feed.ViewModel?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -32,6 +37,9 @@ class FeedTableViewCell: UITableViewCell {
 
         categoryView.makeCircle()
         statusView.makeCircle()
+
+        categoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapCategory(_:))))
+        categoryView.isUserInteractionEnabled = true
 
         voteStatusContainerView.layer.cornerRadius = FeedTableViewCell.cornerRadius
         voteStatusContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
@@ -50,7 +58,16 @@ class FeedTableViewCell: UITableViewCell {
         }
     }
 
+    @objc private func didTapCategory(_ sender: UITapGestureRecognizer) {
+        if let title = model?.category,
+           let category = Category(rawValue: title.lowercased()) {
+            delegate?.feedTableViewCell(didSelectCategory: category)
+        }
+    }
+
     func configure(_ viewModel: FeedEntity.Feed.ViewModel) {
+        model = viewModel
+
         viewModel.images.forEach { image in
             let imageView = UIImageView(image: UIImage(named: image))
             imagesStackView.addArrangedSubview(imageView)
@@ -67,6 +84,10 @@ class FeedTableViewCell: UITableViewCell {
             voteStatusLabel.text = "See and Vote"
         }
     }
+}
+
+protocol FeedTableViewCellDelegate {
+    func feedTableViewCell(didSelectCategory category: Category)
 }
 
 class FeedsTableViewDiffableDataSource: UITableViewDiffableDataSource<String?, FeedEntity.Feed.ViewModel> {}
