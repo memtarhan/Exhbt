@@ -12,19 +12,29 @@ class FeedTableViewCell: UITableViewCell {
     static let reuseIdentifier = "Feed"
     static let nibIdentifier = "FeedTableViewCell"
 
+    @IBOutlet var containerView: CardView!
     @IBOutlet var imagesStackView: UIStackView!
-    @IBOutlet var statusContainerView: UIView!
+    @IBOutlet var categoryView: UIView!
+    @IBOutlet var statusView: UIView!
+    @IBOutlet var voteStatusContainerView: UIView!
+    @IBOutlet var voteStatusImageView: UIImageView!
+    @IBOutlet var voteStatusLabel: UILabel!
 
     static let cornerRadius: CGFloat = 24
 
     override func awakeFromNib() {
         super.awakeFromNib()
 
+        containerView.backgroundColor = .white
+
         imagesStackView.layer.cornerRadius = FeedTableViewCell.cornerRadius
         imagesStackView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
 
-        statusContainerView.layer.cornerRadius = FeedTableViewCell.cornerRadius
-        statusContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        categoryView.makeCircle()
+        statusView.makeCircle()
+
+        voteStatusContainerView.layer.cornerRadius = FeedTableViewCell.cornerRadius
+        voteStatusContainerView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,8 +52,19 @@ class FeedTableViewCell: UITableViewCell {
 
     func configure(_ viewModel: FeedEntity.Feed.ViewModel) {
         viewModel.images.forEach { image in
-            let imageView = UIImageView(image: image)
+            let imageView = UIImageView(image: UIImage(named: image))
             imagesStackView.addArrangedSubview(imageView)
+        }
+
+        if viewModel.voted {
+            voteStatusContainerView.backgroundColor = UIColor(named: "VoteStatus - Unvoted") // TODO: Move it to Colors
+            voteStatusImageView.image = UIImage(named: "Vote")
+            voteStatusLabel.text = "\(viewModel.voteCount!)"
+
+        } else {
+            voteStatusContainerView.backgroundColor = UIColor.systemBlue // TODO: Move it to Colors
+            voteStatusImageView.image = UIImage(named: "VoteThumb")
+            voteStatusLabel.text = "See and Vote"
         }
     }
 }
@@ -57,5 +78,11 @@ class CardView: UIView {
         layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
         layer.shadowRadius = 3.0
         layer.shadowOpacity = 0.7
+    }
+}
+
+extension UIView {
+    func makeCircle() {
+        layer.cornerRadius = frame.height / 2
     }
 }

@@ -40,7 +40,22 @@ class FeedViewControllerImpl: UIViewController {
         self.presenter = presenter
     }
 
+    // MARK: - Actions
+
+    @objc func didTapNotifications(_ sender: UIBarButtonItem) {
+    }
+
     private func setup() {
+        let imageView = UIImageView(image: UIImage(named: "Logo full"))
+        imageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = imageView
+
+        let rightButtonItem = UIBarButtonItem(image: UIImage(named: "Navigation Bar - Notifications"),
+                                              style: .plain,
+                                              target: self,
+                                              action: #selector(didTapNotifications(_:)))
+        navigationItem.rightBarButtonItem = rightButtonItem
+
         let cell = UINib(nibName: FeedTableViewCell.nibIdentifier, bundle: nil)
         tableView.register(cell, forCellReuseIdentifier: FeedTableViewCell.reuseIdentifier)
 

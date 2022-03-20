@@ -129,7 +129,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     /// - Initializing UI w/ initial view controller
     func initUI() {
         let initialViewController = ViewControllerFactory.shared.feed as! UIViewController
-        rootViewController = initialViewController
+        rootViewController = UINavigationController(rootViewController: initialViewController)
     }
 }
 
