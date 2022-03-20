@@ -40,7 +40,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="hdr-gI-i4I" firstAttribute="centerY" secondItem="M61-h7-LPZ" secondAttribute="centerY" id="Nss-RJ-jow"/>
                                             <constraint firstItem="hdr-gI-i4I" firstAttribute="leading" secondItem="M61-h7-LPZ" secondAttribute="leading" constant="12" id="Ztd-nx-APn"/>
@@ -50,18 +50,45 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k4o-In-cwX">
                                         <rect key="frame" x="195" y="0.0" width="175" height="24"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STATUS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFc-58-aa7">
-                                                <rect key="frame" x="12" y="5" width="151" height="14.5"/>
-                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="Lqa-RO-Ktn">
+                                                <rect key="frame" x="12" y="6" width="151" height="12"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="61f-pP-tNL">
+                                                        <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
+                                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="12" id="5yK-ju-Y1a"/>
+                                                            <constraint firstAttribute="height" constant="12" id="U5T-wE-Vum"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GFc-58-aa7">
+                                                        <rect key="frame" x="16" y="0.0" width="135" height="12"/>
+                                                        <attributedString key="attributedText">
+                                                            <fragment content="Live ">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="12" name="SFProText-Medium"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                            <fragment content=". 3d left">
+                                                                <attributes>
+                                                                    <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="NSFont" size="12" name="SFProText-Medium"/>
+                                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="GFc-58-aa7" firstAttribute="leading" secondItem="k4o-In-cwX" secondAttribute="leading" constant="12" id="3Xv-dp-swm"/>
-                                            <constraint firstAttribute="trailing" secondItem="GFc-58-aa7" secondAttribute="trailing" constant="12" id="k6J-2E-AUR"/>
-                                            <constraint firstItem="GFc-58-aa7" firstAttribute="centerY" secondItem="k4o-In-cwX" secondAttribute="centerY" id="q1B-fO-5WO"/>
+                                            <constraint firstItem="Lqa-RO-Ktn" firstAttribute="centerY" secondItem="k4o-In-cwX" secondAttribute="centerY" id="ZHj-kQ-Szw"/>
+                                            <constraint firstItem="Lqa-RO-Ktn" firstAttribute="leading" secondItem="k4o-In-cwX" secondAttribute="leading" constant="12" id="s7x-9c-qJP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Lqa-RO-Ktn" secondAttribute="trailing" constant="12" id="yD6-3E-Fft"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -132,6 +159,8 @@
                 <outlet property="categoryView" destination="M61-h7-LPZ" id="NCS-8M-64c"/>
                 <outlet property="containerView" destination="ArT-4U-Obe" id="m1t-6p-Fpd"/>
                 <outlet property="imagesStackView" destination="Hic-iS-tpe" id="BP4-Pg-Qaz"/>
+                <outlet property="statusLabel" destination="GFc-58-aa7" id="m8t-hn-UEt"/>
+                <outlet property="statusProgressView" destination="61f-pP-tNL" id="7P5-EP-ja9"/>
                 <outlet property="statusView" destination="k4o-In-cwX" id="i5O-WK-4LQ"/>
                 <outlet property="voteStatusContainerView" destination="Pnn-1H-Q37" id="FL8-q0-aUu"/>
                 <outlet property="voteStatusImageView" destination="XKe-sP-7CN" id="jia-g6-fYB"/>
@@ -145,8 +174,8 @@
         <namedColor name="VoteStatus - Unvoted">
             <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

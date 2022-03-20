@@ -19,6 +19,8 @@ class FeedTableViewCell: UITableViewCell {
     @IBOutlet var categoryView: UIView!
     @IBOutlet var categoryLabel: UILabel!
     @IBOutlet var statusView: UIView!
+    @IBOutlet var statusProgressView: UIView!
+    @IBOutlet var statusLabel: UILabel!
     @IBOutlet var voteStatusContainerView: UIView!
     @IBOutlet var voteStatusImageView: UIImageView!
     @IBOutlet var voteStatusLabel: UILabel!
@@ -37,6 +39,7 @@ class FeedTableViewCell: UITableViewCell {
 
         categoryView.makeCircle()
         statusView.makeCircle()
+        statusProgressView.makeCircle()
 
         categoryView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(didTapCategory(_:))))
         categoryView.isUserInteractionEnabled = true
