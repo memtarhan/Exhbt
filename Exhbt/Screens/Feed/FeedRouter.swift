@@ -10,8 +10,16 @@ import UIKit
 
 protocol FeedRouter: AnyObject {
     var view: FeedViewController? { get set }
+
+    func navigateToDetails()
 }
 
 class FeedRouterImpl: FeedRouter {
     var view: FeedViewController?
+
+    func navigateToDetails() {
+        guard let source = view as? UIViewController,
+              let destination = ViewControllerFactory.shared.competitionDetails as? UIViewController else { return }
+        source.navigationController?.pushViewController(destination, animated: true)
+    }
 }

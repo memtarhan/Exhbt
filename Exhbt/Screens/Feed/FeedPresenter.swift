@@ -17,6 +17,8 @@ protocol FeedPresenter: AnyObject {
     var triggerPublisher: Published<Bool>.Publisher { get }
     var fetchCompletionPublisher: Published<Bool>.Publisher { get }
     var diffableDataSource: FeedsTableViewDiffableDataSource? { get set }
+
+    func presentDetails()
 }
 
 class FeedPresenterImpl: FeedPresenter {
@@ -42,6 +44,10 @@ class FeedPresenterImpl: FeedPresenter {
         fetchCompletionPublisher.receive(on: RunLoop.main).debounce(for: .seconds(0.5), scheduler: RunLoop.main)
             .sink { _ in
             }.store(in: &cancellables)
+    }
+
+    func presentDetails() {
+        router?.navigateToDetails()
     }
 
     private func fetchFeeds() {

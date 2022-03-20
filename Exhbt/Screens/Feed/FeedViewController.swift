@@ -99,6 +99,6 @@ extension FeedViewControllerImpl: FeedViewController {
 
 extension FeedViewControllerImpl: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // TODO: Implement selection
+        presenter?.presentDetails()
     }
 }

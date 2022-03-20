@@ -11,8 +11,14 @@ import Foundation
 class ViewControllerFactory {
     static let shared: ViewControllerFactory = ViewControllerFactory()
 
-    var feed: FeedViewController {
+    weak var feed: FeedViewController? {
         let view: FeedViewController = FeedViewControllerImpl(nibName: "FeedViewController", bundle: nil)
+        view.injectDependencies()
+        return view
+    }
+
+    weak var competitionDetails: CompetitionDetailsViewController? {
+        let view: CompetitionDetailsViewController = CompetitionDetailsViewControllerImpl(nibName: "CompetitionDetailsViewController", bundle: nil)
         view.injectDependencies()
         return view
     }
