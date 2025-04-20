@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SegmentedControlHeader" id="U6b-Vx-4bR" customClass="SegmentedControlHeader" customModule="Exhbt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="425" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8aG-6V-4NM">
+                    <rect key="frame" x="16" y="0.0" width="393" height="81"/>
+                    <segments>
+                        <segment title="First"/>
+                        <segment title="Second"/>
+                    </segments>
+                    <connections>
+                        <action selector="didChangeSegment:" destination="U6b-Vx-4bR" eventType="valueChanged" id="tas-rb-83t"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="8aG-6V-4NM" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="Bp8-U7-CMZ"/>
+                <constraint firstItem="8aG-6V-4NM" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="Wwo-3e-1Cc"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="8aG-6V-4NM" secondAttribute="trailing" constant="16" id="ZSJ-gR-mdh"/>
+                <constraint firstAttribute="bottom" secondItem="8aG-6V-4NM" secondAttribute="bottom" id="jan-cl-ePv"/>
+            </constraints>
+            <connections>
+                <outlet property="segmentedControl" destination="8aG-6V-4NM" id="Rdj-mj-ALE"/>
+            </connections>
+            <point key="canvasLocation" x="38.931297709923662" y="30.281690140845072"/>
+        </collectionReusableView>
+    </objects>
+</document>

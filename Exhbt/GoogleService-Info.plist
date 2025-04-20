@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>696203672943-8otitn5hl7bftptevickne44fkfm017i.apps.googleusercontent.com</string>
+	<string>927690196272-hngqqln4jjier3vcsuitnd62sbr165ni.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.696203672943-8otitn5hl7bftptevickne44fkfm017i</string>
+	<string>com.googleusercontent.apps.927690196272-hngqqln4jjier3vcsuitnd62sbr165ni</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAO4kyYtqAJB_dpyVHFChxZfWgo8wY8MWU</string>
+	<string>AIzaSyA4benAQd_Txk1BuO-LFXQWanjQyRK-2dE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>696203672943</string>
+	<string>927690196272</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>com.exhbtmain.exhbt</string>
 	<key>PROJECT_ID</key>
-	<string>exhbt-9675c</string>
+	<string>exhbt-llc</string>
 	<key>STORAGE_BUCKET</key>
-	<string>exhbt-9675c.appspot.com</string>
+	<string>exhbt-llc.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,8 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:696203672943:ios:75a62bb5d06578629d7c9a</string>
-	<key>DATABASE_URL</key>
-	<string>https://exhbt-9675c.firebaseio.com</string>
+	<string>1:927690196272:ios:90fea7f852e4bfa42d34f5</string>
 </dict>
 </plist>

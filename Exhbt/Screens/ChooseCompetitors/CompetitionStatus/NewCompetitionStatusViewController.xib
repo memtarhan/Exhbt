@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewCompetitionStatusViewController" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="accessButton" destination="6gM-gm-Zey" id="PSz-cD-HDM"/>
+                <outlet property="consentIconImageView" destination="iFd-Cc-6NY" id="J4i-OT-kFz"/>
+                <outlet property="consentLabel" destination="bzf-We-C3h" id="wNs-Zu-7G2"/>
+                <outlet property="consentView" destination="Y5v-V3-h3E" id="o8P-J8-Pxd"/>
+                <outlet property="createButton" destination="Fml-OB-pdJ" id="TQq-BL-1km"/>
+                <outlet property="descriptionLabel" destination="cxb-A0-jE7" id="2jo-H9-huw"/>
+                <outlet property="titleImageView" destination="ERb-FB-GP0" id="dSb-FH-Odc"/>
+                <outlet property="titleLabel" destination="KdK-r8-WxM" id="fU1-AN-HM9"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="XjS-2L-hfn">
+                    <rect key="frame" x="24" y="93.333333333333314" width="342" height="657.66666666666674"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="YVM-nq-gx8">
+                            <rect key="frame" x="0.0" y="0.0" width="342" height="493.66666666666669"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Contacts" translatesAutoresizingMaskIntoConstraints="NO" id="ERb-FB-GP0">
+                                    <rect key="frame" x="111" y="0.0" width="120.33333333333331" height="120"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdK-r8-WxM">
+                                    <rect key="frame" x="63.666666666666671" y="140" width="214.66666666666663" height="52.666666666666657"/>
+                                    <string key="text">You chose to create 
+a Private Competition</string>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cxb-A0-jE7">
+                                    <rect key="frame" x="2" y="212.66666666666666" width="338.33333333333331" height="101.66666666666666"/>
+                                    <string key="text">This means only people whom you invite may participate. Provide access to Contacts to see your friends on the app so you can challenge them to competitions, and invite anyone else in a few taps.</string>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y5v-V3-h3E">
+                                    <rect key="frame" x="0.0" y="334.33333333333337" width="342" height="159.33333333333337"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="odu-96-gMR">
+                                            <rect key="frame" x="8" y="8" width="326" height="143.33333333333334"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iFd-Cc-6NY">
+                                                    <rect key="frame" x="0.0" y="2.3333333333333286" width="21" height="138.66666666666669"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="tintColor" systemColor="systemGreenColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="21" id="SXD-4c-iOr"/>
+                                                    </constraints>
+                                                    <imageReference key="image" image="info.circle" catalog="system" symbolScale="small"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We do not store your contacts on our servers and do not send any messages without your consent." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bzf-We-C3h">
+                                                    <rect key="frame" x="27" y="0.0" width="299" height="143.33333333333334"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="LightGray"/>
+                                    <constraints>
+                                        <constraint firstItem="odu-96-gMR" firstAttribute="leading" secondItem="Y5v-V3-h3E" secondAttribute="leading" constant="8" id="Czh-Hq-Mhb"/>
+                                        <constraint firstAttribute="trailing" secondItem="odu-96-gMR" secondAttribute="trailing" constant="8" id="WMV-2d-uZk"/>
+                                        <constraint firstItem="odu-96-gMR" firstAttribute="top" secondItem="Y5v-V3-h3E" secondAttribute="top" constant="8" id="XnI-sP-WnC"/>
+                                        <constraint firstAttribute="bottom" secondItem="odu-96-gMR" secondAttribute="bottom" constant="8" id="lRk-iz-Kdx"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KL2-Td-VVw">
+                            <rect key="frame" x="0.0" y="541.66666666666663" width="342" height="116"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0fT-r3-CwS">
+                                    <rect key="frame" x="48" y="0.0" width="246" height="116"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6gM-gm-Zey" userLabel="Button 1">
+                                            <rect key="frame" x="0.0" y="0.0" width="246" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="H7E-wJ-bkD"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" image="Button-AccessContacts" cornerStyle="small"/>
+                                            <connections>
+                                                <action selector="didTapAccess:" destination="-1" eventType="touchUpInside" id="vVu-Qf-WAc"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fml-OB-pdJ" userLabel="Button 2">
+                                            <rect key="frame" x="0.0" y="66" width="246" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="1aP-TL-9ci"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="Button-MaybeLater" cornerStyle="small"/>
+                                            <connections>
+                                                <action selector="didTapDismiss:" destination="-1" eventType="touchUpInside" id="cbi-1V-FHH"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="0fT-r3-CwS" firstAttribute="top" secondItem="KL2-Td-VVw" secondAttribute="top" id="8kh-Og-4wp"/>
+                                <constraint firstAttribute="trailing" secondItem="0fT-r3-CwS" secondAttribute="trailing" constant="48" id="EMx-C7-VaP"/>
+                                <constraint firstAttribute="bottom" secondItem="0fT-r3-CwS" secondAttribute="bottom" id="rl9-sM-bq8"/>
+                                <constraint firstItem="0fT-r3-CwS" firstAttribute="leading" secondItem="KL2-Td-VVw" secondAttribute="leading" constant="48" id="zXH-DM-LvV"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="XjS-2L-hfn" secondAttribute="trailing" constant="24" id="3Um-C3-0Lo"/>
+                <constraint firstItem="XjS-2L-hfn" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Hw4-2S-du6"/>
+                <constraint firstItem="XjS-2L-hfn" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="24" id="UsO-b5-cLf"/>
+            </constraints>
+            <point key="canvasLocation" x="-98.461538461538453" y="-2.1327014218009479"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Button-AccessContacts" width="295" height="50"/>
+        <image name="Button-MaybeLater" width="295" height="50"/>
+        <image name="Contacts" width="120.33333587646484" height="120"/>
+        <image name="info.circle" catalog="system" width="128" height="123"/>
+        <namedColor name="LightGray">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

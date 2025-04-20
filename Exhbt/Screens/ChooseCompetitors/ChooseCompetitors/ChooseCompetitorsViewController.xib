@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChooseCompetitorsViewController" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="competitorsView" destination="YUS-eb-djg" id="giR-VW-Y51"/>
+                <outlet property="countLabel" destination="ykX-Vx-Jun" id="wQ4-B6-wfS"/>
+                <outlet property="countView" destination="QrU-wR-UTI" id="Xpb-MO-IdU"/>
+                <outlet property="searchBar" destination="Dre-6G-f4l" id="MXk-WH-S03"/>
+                <outlet property="shareButton" destination="mBV-F4-U4b" id="91g-9B-NI5"/>
+                <outlet property="statusButton" destination="H33-BN-nZE" id="lit-wY-Eme"/>
+                <outlet property="tableView" destination="W0F-iO-4Eg" id="aJL-k4-HYU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZWz-Cz-tOR">
+                    <rect key="frame" x="0.0" y="47" width="390" height="763"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aci-eO-32i">
+                            <rect key="frame" x="0.0" y="0.0" width="390" height="629"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WG2-KE-ZMS" userLabel="Search Bar View">
+                                    <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                                    <subviews>
+                                        <searchBar contentMode="redraw" placeholder="Search by name or number" translatesAutoresizingMaskIntoConstraints="NO" id="Dre-6G-f4l">
+                                            <rect key="frame" x="8" y="8" width="374" height="40"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="A8l-x9-mZA"/>
+                                            </connections>
+                                        </searchBar>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Dre-6G-f4l" secondAttribute="trailing" constant="8" id="Qz3-zm-Tws"/>
+                                        <constraint firstAttribute="bottom" secondItem="Dre-6G-f4l" secondAttribute="bottom" constant="8" id="WgD-gO-PQz"/>
+                                        <constraint firstAttribute="height" constant="56" id="g65-iX-6TP"/>
+                                        <constraint firstItem="Dre-6G-f4l" firstAttribute="top" secondItem="WG2-KE-ZMS" secondAttribute="top" constant="8" id="na9-Yq-lIM"/>
+                                        <constraint firstItem="Dre-6G-f4l" firstAttribute="leading" secondItem="WG2-KE-ZMS" secondAttribute="leading" constant="8" id="yqN-Im-u2R"/>
+                                    </constraints>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vyn-Or-Obi" userLabel="Invitation View">
+                                    <rect key="frame" x="0.0" y="76" width="390" height="72"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Rae-ZR-cUl">
+                                            <rect key="frame" x="16" y="0.0" width="358" height="72"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBV-F4-U4b">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72" height="72"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="mBV-F4-U4b" secondAttribute="height" multiplier="1:1" id="1Rd-1p-C99"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="ShareIconCircle"/>
+                                                    <connections>
+                                                        <action selector="didTapShare:" destination="-1" eventType="touchUpInside" id="E8C-7F-NEb"/>
+                                                    </connections>
+                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="1Q1-Wh-XDH">
+                                                    <rect key="frame" x="84" y="14" width="274" height="44"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Invite Friends to Exhbt" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5L0-1X-Vsb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="169" height="20.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <color key="textColor" systemColor="systemBlueColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create and share unique referral link" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ybY-i0-06y">
+                                                            <rect key="frame" x="0.0" y="28.333333333333346" width="220" height="15.666666666666668"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <color key="textColor" name="ExhbtGrey"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Rae-ZR-cUl" secondAttribute="trailing" constant="16" id="1Zu-jx-qPg"/>
+                                        <constraint firstItem="Rae-ZR-cUl" firstAttribute="top" secondItem="vyn-Or-Obi" secondAttribute="top" id="37h-CJ-10n"/>
+                                        <constraint firstAttribute="bottom" secondItem="Rae-ZR-cUl" secondAttribute="bottom" id="Lxc-QK-Bad"/>
+                                        <constraint firstItem="Rae-ZR-cUl" firstAttribute="leading" secondItem="vyn-Or-Obi" secondAttribute="leading" constant="16" id="dRb-Xe-eXb"/>
+                                    </constraints>
+                                </view>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="W0F-iO-4Eg">
+                                    <rect key="frame" x="0.0" y="168" width="390" height="461"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" name="BackgroundPrimary"/>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrU-wR-UTI" userLabel="Count View">
+                            <rect key="frame" x="0.0" y="629" width="390" height="34"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N Contacts Will be Invited to Exhbt" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykX-Vx-Jun">
+                                    <rect key="frame" x="8" y="8" width="374" height="18"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" name="ExhbtGrey"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" name="LightGray"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="ykX-Vx-Jun" secondAttribute="bottom" constant="8" id="91d-Bf-1P0"/>
+                                <constraint firstAttribute="trailing" secondItem="ykX-Vx-Jun" secondAttribute="trailing" constant="8" id="WXU-Rm-62J"/>
+                                <constraint firstItem="ykX-Vx-Jun" firstAttribute="leading" secondItem="QrU-wR-UTI" secondAttribute="leading" constant="8" id="Y5Q-KW-4sE"/>
+                                <constraint firstItem="ykX-Vx-Jun" firstAttribute="top" secondItem="QrU-wR-UTI" secondAttribute="top" constant="8" id="jpW-aw-VI7"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b6G-Oj-p6K" userLabel="Line View">
+                            <rect key="frame" x="0.0" y="663" width="390" height="1"/>
+                            <color key="backgroundColor" name="LightGray"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Yxp-Pl-aPD"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m5p-Og-SzN" userLabel="Status View">
+                            <rect key="frame" x="0.0" y="664" width="390" height="48"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H33-BN-nZE" customClass="ButtonWithMultipleImages" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="100" y="8" width="190" height="32"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="05G-6E-fkS"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="BackgroundPrimary"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="48" id="caZ-Bs-NxL"/>
+                                <constraint firstItem="H33-BN-nZE" firstAttribute="centerY" secondItem="m5p-Og-SzN" secondAttribute="centerY" id="mvp-km-6iF"/>
+                                <constraint firstItem="H33-BN-nZE" firstAttribute="centerX" secondItem="m5p-Og-SzN" secondAttribute="centerX" id="nUs-ad-Keg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Po4-TV-Qfg" userLabel="Line View">
+                            <rect key="frame" x="0.0" y="712" width="390" height="1"/>
+                            <color key="backgroundColor" name="LightGray"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="ADs-Si-BmV"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s1-xT-E1s" userLabel="Competitors View">
+                            <rect key="frame" x="0.0" y="713" width="390" height="50"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YUS-eb-djg" customClass="HorizontalCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="11" width="390" height="28"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="ik3-bJ-ghF"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="BackgroundPrimary"/>
+                            <constraints>
+                                <constraint firstItem="YUS-eb-djg" firstAttribute="leading" secondItem="6s1-xT-E1s" secondAttribute="leading" id="CS5-yK-T3A"/>
+                                <constraint firstAttribute="height" constant="50" id="Tz6-Ww-kOZ"/>
+                                <constraint firstAttribute="trailing" secondItem="YUS-eb-djg" secondAttribute="trailing" id="bL8-Kl-0W9"/>
+                                <constraint firstItem="YUS-eb-djg" firstAttribute="centerY" secondItem="6s1-xT-E1s" secondAttribute="centerY" id="mp5-4Z-6al"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="BackgroundPrimary"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZWz-Cz-tOR" secondAttribute="bottom" id="2ec-7k-ajt"/>
+                <constraint firstItem="ZWz-Cz-tOR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="H01-YX-RND"/>
+                <constraint firstItem="ZWz-Cz-tOR" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="tE7-jo-tgl"/>
+                <constraint firstItem="ZWz-Cz-tOR" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zhK-of-p9B"/>
+            </constraints>
+            <point key="canvasLocation" x="33.846153846153847" y="20.616113744075829"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ShareIconCircle" width="48" height="48"/>
+        <namedColor name="BackgroundPrimary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ExhbtGrey">
+            <color red="0.30980392156862746" green="0.30980392156862746" blue="0.30980392156862746" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightGray">
+            <color red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

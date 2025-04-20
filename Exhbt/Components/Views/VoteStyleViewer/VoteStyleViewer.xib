@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoteStyleViewer" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="containerView" destination="11i-Ly-MkA" id="D9h-6H-SP3"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="voteStackView" destination="wai-3Z-BSz" id="lLC-Zb-1NM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="11i-Ly-MkA">
+                    <rect key="frame" x="0.0" y="690" width="414" height="206"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="J33-cC-Gke">
+                            <rect key="frame" x="20" y="37" width="374" height="132"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="dN0-50-8jz">
+                                    <rect key="frame" x="62.5" y="0.0" width="249.5" height="42"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Choose Your Style…" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y5I-yQ-VcW">
+                                            <rect key="frame" x="0.0" y="0.0" width="249.5" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It Will Represent Your Votes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJe-AF-M97">
+                                            <rect key="frame" x="40.5" y="26" width="168" height="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="wai-3Z-BSz">
+                                    <rect key="frame" x="37" y="82" width="300" height="50"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style Setting 1" translatesAutoresizingMaskIntoConstraints="NO" id="vTm-D6-fxX">
+                                            <rect key="frame" x="0.0" y="0.0" width="66" height="50"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style Setting 2" translatesAutoresizingMaskIntoConstraints="NO" id="Fgd-2A-W5X">
+                                            <rect key="frame" x="78" y="0.0" width="66" height="50"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style Setting 3" translatesAutoresizingMaskIntoConstraints="NO" id="Rb2-vM-bXT">
+                                            <rect key="frame" x="156" y="0.0" width="66" height="50"/>
+                                        </imageView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style Setting 4" translatesAutoresizingMaskIntoConstraints="NO" id="USv-d4-0pF">
+                                            <rect key="frame" x="234" y="0.0" width="66" height="50"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="oU4-wm-eTM"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="206" id="XRn-pc-V3B"/>
+                        <constraint firstItem="J33-cC-Gke" firstAttribute="centerY" secondItem="11i-Ly-MkA" secondAttribute="centerY" id="aCP-pR-346"/>
+                        <constraint firstAttribute="trailing" secondItem="J33-cC-Gke" secondAttribute="trailing" constant="20" id="b4j-uE-0mh"/>
+                        <constraint firstItem="J33-cC-Gke" firstAttribute="leading" secondItem="11i-Ly-MkA" secondAttribute="leading" constant="20" id="fE6-zS-i2f"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dsv-Tg-UER">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="690"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="oZq-vU-mle" appends="YES" id="sNX-Sl-SfV"/>
+                    </connections>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="11i-Ly-MkA" secondAttribute="bottom" id="2gW-Ak-S9I"/>
+                <constraint firstItem="11i-Ly-MkA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Eas-qG-0x7"/>
+                <constraint firstItem="Dsv-Tg-UER" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="SdK-MA-sYS"/>
+                <constraint firstItem="11i-Ly-MkA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aBa-Ct-WLq"/>
+                <constraint firstItem="Dsv-Tg-UER" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="hfn-kE-MiW"/>
+                <constraint firstItem="11i-Ly-MkA" firstAttribute="top" secondItem="Dsv-Tg-UER" secondAttribute="bottom" id="p9U-ye-R68"/>
+                <constraint firstItem="Dsv-Tg-UER" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="sIh-IT-vmx"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="70.982142857142847"/>
+        </view>
+        <tapGestureRecognizer id="oZq-vU-mle">
+            <connections>
+                <action selector="didTap:" destination="-1" id="0dR-tf-axi"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="Vote Style Setting 1" width="66" height="50"/>
+        <image name="Vote Style Setting 2" width="66" height="50"/>
+        <image name="Vote Style Setting 3" width="66" height="50"/>
+        <image name="Vote Style Setting 4" width="66" height="50"/>
+    </resources>
+</document>

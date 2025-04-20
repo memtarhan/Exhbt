@@ -2,96 +2,50 @@
 //  SceneDelegate.swift
 //  Exhbt
 //
-//  Created by Steven Worrall on 4/8/20.
-//  Copyright © 2020 Exhbt LLC. All rights reserved.
+//  Created by Mehmet Tarhan on 27/06/2022.
+//  Copyright © 2022 Exhbt LLC. All rights reserved.
 //
 
-import CoreData
 import Firebase
-import FirebaseCrashlytics
-import FirebaseDynamicLinks
+import Swinject
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
-    let tabBarController = TabBarController()
 
     var rootViewController: UIViewController? {
         get { return window?.rootViewController }
         set {
             window?.rootViewController = newValue
+            window?.overrideUserInterfaceStyle = .light
             window?.makeKeyAndVisible()
         }
     }
-
-    private lazy var authInteractor: AuthInteractor = {
-        let interactor = AuthInteractor()
-        interactor.delegate = self
-        return interactor
-    }()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        FirebaseApp.configure()
-        Crashlytics.crashlytics().setCrashlyticsCollectionEnabled(true)
-
         guard let windowScene = (scene as? UIWindowScene) else { return }
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
 
+        initDI()
         initUI()
 
-//        authInteractor.loginFromDevice()
-    }
-
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-        if let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url),
-           let dynamicLinkUrl = dynamicLink.url {
-            handleDeepLink(dynamicLinkUrl)
-            return true
-        }
-        return false
-    }
-
-    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
-        if let url = userActivity.webpageURL {
-            DynamicLinks.dynamicLinks().handleUniversalLink(url) { dynamiclink, error in
-                if let dynamicLinkUrl = dynamiclink?.url {
-                    self.handleDeepLink(dynamicLinkUrl)
-                }
-                if let error = error {
-                    print("error handling universal link: \(error.localizedDescription)")
-                }
+        if let userActivity = connectionOptions.userActivities.first {
+            if let incomingURL = userActivity.webpageURL {
+                handleFirebaseDynamicLink(url: incomingURL)
             }
         }
-    }
-
-    private func handleDeepLink(_ url: URL) {
-        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
-        let parts = components.path.components(separatedBy: "/")
-        guard parts.count > 2 else { return }
-
-        let path = parts[1]
-        let id = parts[2]
-
-        if path == "invite" {
-            tabBarController.deepLink = .invite(id)
-        } else if path == "competition" {
-            tabBarController.deepLink = .competition(id)
-        } else if path == "user" {
-            tabBarController.deepLink = .user(id)
-        }
-        tabBarController.routeToDeepLink()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.
         // Release any resources associated with this scene that can be re-created the next time the scene connects.
-        // The scene may re-connect later, as its session was not neccessarily discarded (see `application:didDiscardSceneSessions` instead).
+        // The scene may re-connect later, as its session was not necessarily discarded (see `application:didDiscardSceneSessions` instead).
     }
 
     func sceneDidBecomeActive(_ scene: UIScene) {
@@ -113,34 +67,78 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Called as the scene transitions from the foreground to the background.
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
-        (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
 
-    private func setupRootController() {
-        tabBarController.initialize()
-        let navController = NavController(rootViewController: tabBarController)
-        navController.navigationBar.isHidden = true
-        navController.interactivePopGestureRecognizer?.isEnabled = false
+    func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
+        if let schemeURL = URLContexts.first?.url {
+            handleFirebaseDynamicLinksFromScheme(schemeURL)
+        }
+    }
 
-        window?.rootViewController = navController
-        window?.makeKeyAndVisible()
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        guard userActivity.activityType == NSUserActivityTypeBrowsingWeb,
+              let url = userActivity.webpageURL else {
+            return
+        }
+        handleFirebaseDynamicLink(url: url)
+    }
+
+    private func handle(incomingURL url: URL?) {
+        debugLog(self, "\(#function) url: \(String(describing: url))")
+
+        guard let url else { return }
+        guard let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { return }
+        let path = components.path
+        debugLog(self, "incomingURL: \(path)")
+
+        let parts = path.components(separatedBy: "/")
+
+        if let invitationPath = parts.last {
+            let invitationParts = invitationPath.components(separatedBy: "=")
+            if let invitationId = invitationParts.last,
+               let id = Int(invitationId) {
+                AppState.shared.exhbtInvitationId = id
+                AppState.shared.invited.send(id)
+            }
+        }
+    }
+
+    /// - Initializing dependency injection
+    private func initDI() {
+        AppAssembler.shared.initDI()
     }
 
     /// - Initializing UI w/ initial view controller
     func initUI() {
-        let initialViewController = ViewControllerFactory.shared.feed as! UIViewController
-        rootViewController = UINavigationController(rootViewController: initialViewController)
+        rootViewController = AppAssembler.shared.assembler?.resolver.resolve(SplashViewController.self)
     }
 }
 
-extension SceneDelegate: AuthInteractorDelegate {
-    func signInSuccess(_ user: User, for authFlow: AuthFlow) {
-        setupRootController()
+private extension SceneDelegate {
+    func handleFirebaseDynamicLink(url: URL) {
+        DynamicLinks.dynamicLinks()
+            .handleUniversalLink(url) { dynamiclink, error in
+                if let error = error {
+                    debugLog(self, "DynamicLink failed \(error)")
+                    return
+                }
+                guard let dynamiclink = dynamiclink else {
+                    debugLog(self, "DynamicLink success \(String(describing: dynamiclink))")
+                    return
+                }
+                guard let url = dynamiclink.url else {
+                    debugLog(self, "DynamicLink success \(dynamiclink)")
+                    return
+                }
+                self.handle(incomingURL: url)
+            }
     }
 
-    func failedToLoginFromDevice() {
-        setupRootController()
+    func handleFirebaseDynamicLinksFromScheme(_ url: URL) {
+        guard let dynamicLink = DynamicLinks.dynamicLinks().dynamicLink(fromCustomSchemeURL: url),
+              let url = dynamicLink.url else {
+            return
+        }
+        handle(incomingURL: url)
     }
-
-    func signInError(_ error: AuthError) {}
 }

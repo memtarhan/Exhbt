@@ -1,2 +1,0 @@
-Device ID	Device Name
-00008020-000A59863C81002E	Shouvik's iPhone XS Max

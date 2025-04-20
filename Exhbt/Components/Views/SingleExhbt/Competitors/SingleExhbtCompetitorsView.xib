@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SingleExhbtCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="competitorsView" destination="lPT-Qb-eE6" id="m5N-is-QVE"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="zSF-jk-3Ff"/>
+                <outlet property="countDescriptionLabel" destination="yRk-Kg-PRE" id="T1D-P0-e2E"/>
+                <outlet property="expandButton" destination="SU1-je-VgP" id="GKJ-Zw-b8h"/>
+                <outlet property="inviteCompetitorsButton" destination="1Ba-71-ce9" id="eXc-f1-AW2"/>
+                <outlet property="tableView" destination="2a1-hh-1Ox" id="Rmy-RV-snf"/>
+                <outlet property="titleLabel" destination="jS1-GS-NNC" id="5cX-oz-hbM"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="441" height="149"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="D04-su-EnD">
+                    <rect key="frame" x="0.0" y="0.0" width="441" height="149"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c3x-NC-k0P">
+                            <rect key="frame" x="0.0" y="0.0" width="441" height="24"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="H2k-7G-PfX">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="24"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competitors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jS1-GS-NNC">
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="jmJ-WV-FsA"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="•" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSo-dV-ftK">
+                                            <rect key="frame" x="103" y="0.0" width="8" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="Yh2-YM-EKu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="?/8" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRk-Kg-PRE">
+                                            <rect key="frame" x="115" y="0.0" width="25" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="jVO-7q-pnd"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SU1-je-VgP">
+                                    <rect key="frame" x="417" y="1" width="24" height="22"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="45C-MF-IDf"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal">
+                                        <imageReference key="image" image="Exhbt-chevron-bottom" symbolScale="default"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="SU1-je-VgP" firstAttribute="centerY" secondItem="c3x-NC-k0P" secondAttribute="centerY" id="GUp-00-1R1"/>
+                                <constraint firstAttribute="height" constant="24" id="LqQ-6X-v4t"/>
+                                <constraint firstAttribute="trailing" secondItem="SU1-je-VgP" secondAttribute="trailing" id="QCU-1l-wpz"/>
+                                <constraint firstItem="H2k-7G-PfX" firstAttribute="centerY" secondItem="c3x-NC-k0P" secondAttribute="centerY" id="h8h-4E-Jqv"/>
+                                <constraint firstItem="H2k-7G-PfX" firstAttribute="leading" secondItem="c3x-NC-k0P" secondAttribute="leading" id="lJs-DH-w7a"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lPT-Qb-eE6" customClass="HorizontalCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="32" width="441" height="36"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="36" id="gv6-b2-TRV"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2a1-hh-1Ox" customClass="DynamiclySizedTableView" customModule="Exhbt" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="76" width="441" height="29"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kX-GJ-59A">
+                            <rect key="frame" x="0.0" y="113" width="441" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ba-71-ce9" customClass="FilledButton" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="163.33333333333334" height="36"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="36" id="MQK-Dh-SuS"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Invite Competitors"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Invite Competitors"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="1Ba-71-ce9" secondAttribute="bottom" id="2Ta-Wi-2rm"/>
+                                <constraint firstItem="1Ba-71-ce9" firstAttribute="leading" secondItem="6kX-GJ-59A" secondAttribute="leading" id="HJU-V3-rXU"/>
+                                <constraint firstItem="1Ba-71-ce9" firstAttribute="top" secondItem="6kX-GJ-59A" secondAttribute="top" id="ebH-fi-Uqq"/>
+                                <constraint firstAttribute="height" constant="36" id="iHX-pO-2V0"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="D04-su-EnD" secondAttribute="bottom" id="Rtj-Rm-gdD"/>
+                <constraint firstItem="D04-su-EnD" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="gaj-mQ-1t5"/>
+                <constraint firstItem="D04-su-EnD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="psN-1c-5rA"/>
+                <constraint firstItem="D04-su-EnD" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="rSe-rM-Dyf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-200.76335877862596" y="-182.74647887323945"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="1Ba-71-ce9">
+            <size key="intrinsicContentSize" width="163.33333333333334" height="34.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="Exhbt-chevron-bottom" width="13.666666984558105" height="8"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

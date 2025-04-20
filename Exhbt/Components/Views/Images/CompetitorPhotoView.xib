@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CompetitorPhotoView" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="S3Z-wu-8NI"/>
+                <outlet property="imageView" destination="8oS-jL-iDD" id="ME7-fM-laG"/>
+                <outlet property="statusImageView" destination="CPA-3Q-FoG" id="qTM-1C-53y"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8oS-jL-iDD">
+                    <rect key="frame" x="1" y="1" width="298" height="298"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="tintColor" red="0.76862745098039209" green="0.76862745098039209" blue="0.76862745098039209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="questionmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CPA-3Q-FoG" userLabel="Status Image View">
+                    <rect key="frame" x="175" y="176" width="125" height="123.66666666666669"/>
+                    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="CPA-3Q-FoG" secondAttribute="bottom" id="FI2-jc-d5F"/>
+                <constraint firstItem="8oS-jL-iDD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="1" id="Hcy-RJ-uH5"/>
+                <constraint firstItem="CPA-3Q-FoG" firstAttribute="height" secondItem="8oS-jL-iDD" secondAttribute="height" multiplier="0.42" id="KMs-OC-lUn"/>
+                <constraint firstAttribute="bottom" secondItem="8oS-jL-iDD" secondAttribute="bottom" constant="1" id="W2k-3I-wIb"/>
+                <constraint firstItem="8oS-jL-iDD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="1" id="ZPY-vM-cb0"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="CPA-3Q-FoG" secondAttribute="trailing" id="h2E-xx-9nZ"/>
+                <constraint firstAttribute="trailing" secondItem="8oS-jL-iDD" secondAttribute="trailing" constant="1" id="r9V-le-DZa"/>
+                <constraint firstItem="CPA-3Q-FoG" firstAttribute="width" secondItem="8oS-jL-iDD" secondAttribute="width" multiplier="0.42" id="wtL-jU-tua"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-64.122137404580144" y="-174.64788732394368"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="questionmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="LeaderboardHeader" id="U6b-Vx-4bR" customClass="LeaderboardHeader" customModule="Exhbt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3m-CC-xeA">
+                    <rect key="frame" x="15.999999999999998" y="17.333333333333332" width="30.333333333333321" height="15.666666666666668"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7i-sf-KXo">
+                    <rect key="frame" x="66.333333333333329" y="17.333333333333332" width="28.666666666666671" height="15.666666666666668"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yla-9n-lN4">
+                    <rect key="frame" x="268.66666666666669" y="17.333333333333332" width="35.333333333333314" height="15.666666666666668"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Yla-9n-lN4" secondAttribute="trailing" constant="16" id="5tV-rT-0Sc"/>
+                <constraint firstItem="G7i-sf-KXo" firstAttribute="leading" secondItem="D3m-CC-xeA" secondAttribute="trailing" constant="20" id="Dpn-SS-VCh"/>
+                <constraint firstItem="D3m-CC-xeA" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="Qdq-lq-vf0"/>
+                <constraint firstItem="G7i-sf-KXo" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="nbx-eq-V24"/>
+                <constraint firstItem="D3m-CC-xeA" firstAttribute="leading" secondItem="U6b-Vx-4bR" secondAttribute="leading" constant="16" id="snl-X5-bqs"/>
+                <constraint firstItem="Yla-9n-lN4" firstAttribute="centerY" secondItem="U6b-Vx-4bR" secondAttribute="centerY" id="zri-Zp-1vp"/>
+            </constraints>
+            <point key="canvasLocation" x="-50" y="20"/>
+        </collectionReusableView>
+    </objects>
+</document>

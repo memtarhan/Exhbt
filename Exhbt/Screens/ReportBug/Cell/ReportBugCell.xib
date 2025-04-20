@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="76" id="KGk-i7-Jjw" customClass="ReportBugCell" customModule="Exhbt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="395" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="395" height="76"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jpu-Id-TsL">
+                        <rect key="frame" x="0.0" y="4" width="395" height="68"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ebw-H0-M7u">
+                                <rect key="frame" x="6.0000000000000018" y="6" width="31.666666666666671" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ebw-H0-M7u" secondAttribute="height" multiplier="36:64" id="8QV-AI-JPL"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="C6b-E8-8Vo">
+                                <rect key="frame" x="49.666666666666657" y="18.000000000000004" width="105" height="32.333333333333343"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IMG_5891.PNG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvT-ud-DM3">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="102 KB" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ICQ-th-6zI">
+                                        <rect key="frame" x="0.0" y="18" width="105" height="14.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7ix-kp-dIU">
+                                <rect key="frame" x="363" y="22" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="iUA-XW-Srx"/>
+                                    <constraint firstAttribute="height" constant="24" id="nPh-wB-j8a"/>
+                                </constraints>
+                                <color key="tintColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="trash.fill" catalog="system">
+                                    <color key="titleColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapTrash" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6kq-PK-Xqx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Ebw-H0-M7u" firstAttribute="top" secondItem="jpu-Id-TsL" secondAttribute="top" constant="6" id="446-dB-wvd"/>
+                            <constraint firstItem="7ix-kp-dIU" firstAttribute="centerY" secondItem="jpu-Id-TsL" secondAttribute="centerY" id="fiT-4D-wuz"/>
+                            <constraint firstItem="C6b-E8-8Vo" firstAttribute="centerY" secondItem="jpu-Id-TsL" secondAttribute="centerY" id="h4i-Uw-W2R"/>
+                            <constraint firstItem="C6b-E8-8Vo" firstAttribute="leading" secondItem="Ebw-H0-M7u" secondAttribute="trailing" constant="12" id="i0B-ry-HGF"/>
+                            <constraint firstItem="Ebw-H0-M7u" firstAttribute="leading" secondItem="jpu-Id-TsL" secondAttribute="leading" constant="6" id="oIY-od-hRS"/>
+                            <constraint firstAttribute="bottom" secondItem="Ebw-H0-M7u" secondAttribute="bottom" constant="6" id="qdv-yw-hZS"/>
+                            <constraint firstAttribute="trailing" secondItem="7ix-kp-dIU" secondAttribute="trailing" constant="8" id="sJr-J1-Ki3"/>
+                            <constraint firstItem="7ix-kp-dIU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="C6b-E8-8Vo" secondAttribute="trailing" constant="8" id="xjc-sj-0EV"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="6"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="jpu-Id-TsL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="0Qs-yl-85B"/>
+                    <constraint firstItem="jpu-Id-TsL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="22h-JX-PwR"/>
+                    <constraint firstAttribute="trailing" secondItem="jpu-Id-TsL" secondAttribute="trailing" id="FZB-8H-a6h"/>
+                    <constraint firstAttribute="bottom" secondItem="jpu-Id-TsL" secondAttribute="bottom" constant="4" id="XxO-8Z-vbO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageNameLabel" destination="cvT-ud-DM3" id="7hW-fM-7Y1"/>
+                <outlet property="imageSizeLabel" destination="ICQ-th-6zI" id="Veh-ak-Qyw"/>
+                <outlet property="reportImageView" destination="Ebw-H0-M7u" id="SWt-38-3vL"/>
+            </connections>
+            <point key="canvasLocation" x="28.244274809160306" y="44.366197183098592"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="trash.fill" catalog="system" width="119" height="128"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

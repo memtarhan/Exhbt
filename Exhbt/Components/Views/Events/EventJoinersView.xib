@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventJoinersView" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="lrQ-Ay-KFq"/>
+                <outlet property="photosStackView" destination="biW-JD-hpJ" id="IF9-Pc-hEm"/>
+                <outlet property="stackView" destination="kjU-sW-TKV" id="bKs-oE-LSq"/>
+                <outlet property="titleLabel" destination="1h8-Ec-cxT" id="7h3-o1-G2v"/>
+                <outletCollection property="imageViews" destination="wpr-L3-bek" collectionClass="NSMutableArray" id="K9v-34-DeM"/>
+                <outletCollection property="imageViews" destination="jid-aa-1Vw" collectionClass="NSMutableArray" id="qbT-5C-us8"/>
+                <outletCollection property="imageViews" destination="qT8-nw-r2c" collectionClass="NSMutableArray" id="0r3-Tv-xdE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="460" height="113"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="kjU-sW-TKV">
+                    <rect key="frame" x="0.0" y="34.666666666666664" width="460" height="43.999999999999993"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="-8" translatesAutoresizingMaskIntoConstraints="NO" id="biW-JD-hpJ">
+                            <rect key="frame" x="0.0" y="0.0" width="38" height="44"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="wpr-L3-bek" customClass="CircleImageView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="2" width="18" height="40.666666666666671"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="44" id="8jc-5v-qIZ"/>
+                                        <constraint firstAttribute="width" constant="44" id="SS9-6c-bDg"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jid-aa-1Vw" customClass="CircleImageView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="10" y="2" width="18" height="40.666666666666671"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="qT8-nw-r2c" customClass="CircleImageView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="2" width="18" height="40.666666666666671"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                            <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1h8-Ec-cxT">
+                            <rect key="frame" x="42" y="14.333333333333336" width="418" height="15.666666666666664"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="biW-JD-hpJ" secondAttribute="bottom" id="Ve3-Qd-4jc"/>
+                        <constraint firstItem="biW-JD-hpJ" firstAttribute="top" secondItem="kjU-sW-TKV" secondAttribute="top" id="XMU-3s-3SV"/>
+                        <constraint firstItem="biW-JD-hpJ" firstAttribute="leading" secondItem="kjU-sW-TKV" secondAttribute="leading" id="yxT-Ul-MRg"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="kjU-sW-TKV" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C7a-i7-0VV"/>
+                <constraint firstAttribute="trailing" secondItem="kjU-sW-TKV" secondAttribute="trailing" id="DS7-Cj-qAk"/>
+                <constraint firstItem="kjU-sW-TKV" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="PoS-nU-mWB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-112.97709923664122" y="-272.88732394366201"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="jid-aa-1Vw">
+            <size key="intrinsicContentSize" width="18" height="20.333333333333332"/>
+        </designable>
+        <designable name="qT8-nw-r2c">
+            <size key="intrinsicContentSize" width="18" height="20.333333333333332"/>
+        </designable>
+        <designable name="wpr-L3-bek">
+            <size key="intrinsicContentSize" width="18" height="20.333333333333332"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VoteStatusView" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="contentView" destination="iN0-l3-epB" id="UB5-TF-m9d"/>
+                <outlet property="thumbImagesStackView" destination="hub-Ss-Ari" id="kxN-P4-LtD"/>
+                <outlet property="voteButton" destination="GXS-vQ-qfp" id="P6g-75-Muc"/>
+                <outlet property="voteCountLabel" destination="Lmw-Uu-Rjs" id="J2a-2O-6QJ"/>
+                <outlet property="votesStackView" destination="R4x-Yz-TOx" id="LRB-DK-Y8I"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="495" height="88"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="R4x-Yz-TOx">
+                    <rect key="frame" x="12" y="34" width="97" height="20.333333333333329"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="hub-Ss-Ari">
+                            <rect key="frame" x="0.0" y="0.0" width="82" height="20.333333333333332"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style 1" translatesAutoresizingMaskIntoConstraints="NO" id="qf7-4i-SFT">
+                                    <rect key="frame" x="0.0" y="0.0" width="19" height="20.333333333333332"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style 2" translatesAutoresizingMaskIntoConstraints="NO" id="2zd-nn-VdN">
+                                    <rect key="frame" x="21" y="0.0" width="19" height="20.333333333333332"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style 3" translatesAutoresizingMaskIntoConstraints="NO" id="pV9-5w-cdC">
+                                    <rect key="frame" x="42" y="0.0" width="19" height="20.333333333333332"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style 4" translatesAutoresizingMaskIntoConstraints="NO" id="MJg-7x-Dax">
+                                    <rect key="frame" x="63" y="0.0" width="19" height="20.333333333333332"/>
+                                </imageView>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lmw-Uu-Rjs">
+                            <rect key="frame" x="86" y="0.0" width="11" height="20.333333333333332"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GXS-vQ-qfp">
+                    <rect key="frame" x="205.33333333333334" y="27.000000000000004" width="84.333333333333343" height="34.333333333333343"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="hand.thumbsup" catalog="system" title="Vote" cornerStyle="capsule"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="TitleBackgroundWithOpacity"/>
+            <constraints>
+                <constraint firstItem="GXS-vQ-qfp" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="Hai-8j-Z8a"/>
+                <constraint firstItem="GXS-vQ-qfp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="K3I-Vf-jM0"/>
+                <constraint firstItem="R4x-Yz-TOx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="PMc-Xv-LF1"/>
+                <constraint firstItem="R4x-Yz-TOx" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="gLl-zX-OTB"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="104.58015267175573" y="-249.29577464788733"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Vote Style 1" width="18.333333969116211" height="19"/>
+        <image name="Vote Style 2" width="18.333333969116211" height="19"/>
+        <image name="Vote Style 3" width="18.333333969116211" height="19"/>
+        <image name="Vote Style 4" width="19" height="19.666666030883789"/>
+        <image name="hand.thumbsup" catalog="system" width="123" height="128"/>
+        <namedColor name="TitleBackgroundWithOpacity">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.47999998927116394" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

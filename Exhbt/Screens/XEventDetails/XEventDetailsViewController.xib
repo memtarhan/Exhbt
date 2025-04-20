@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="XEventDetailsViewController" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="tnl-kC-PP5" id="nw2-JQ-M9t"/>
+                <outlet property="postButton" destination="eYG-ok-tYP" id="u99-MB-Iog"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tnl-kC-PP5">
+                    <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Pcx-xN-8nX">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eYG-ok-tYP">
+                    <rect key="frame" x="168.66666666666666" y="780" width="56" height="38"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Button-PostEvent"/>
+                    <connections>
+                        <action selector="didTapJoinEvent:" destination="-1" eventType="touchUpInside" id="i50-jU-IFO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tnl-kC-PP5" secondAttribute="trailing" id="BFc-HK-2TM"/>
+                <constraint firstItem="tnl-kC-PP5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="JWe-Fx-bje"/>
+                <constraint firstAttribute="bottom" secondItem="tnl-kC-PP5" secondAttribute="bottom" id="iyo-NS-dAz"/>
+                <constraint firstItem="tnl-kC-PP5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ruP-Bf-kwp"/>
+                <constraint firstItem="eYG-ok-tYP" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="uVE-6q-AeK"/>
+                <constraint firstItem="eYG-ok-tYP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vdm-nv-21b"/>
+            </constraints>
+            <point key="canvasLocation" x="6" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Button-PostEvent" width="32" height="24"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

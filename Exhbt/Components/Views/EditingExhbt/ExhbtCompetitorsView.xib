@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExhbtCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="acceptedView" destination="naV-OA-4Hi" id="aEA-bd-nkO"/>
+                <outlet property="collapseButton" destination="TVA-Og-RsR" id="KIM-QI-UPK"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="1PY-ah-Yc2"/>
+                <outlet property="horizontalCompetitorsContainerView" destination="z0N-uC-xkh" id="fN7-Zy-CuZ"/>
+                <outlet property="horizontalCompetitorsView" destination="D7c-Sk-8Xb" id="n35-Cl-zD9"/>
+                <outlet property="pendingView" destination="7m4-Om-Std" id="yKy-0Q-keE"/>
+                <outlet property="verticalCompetitorsStackView" destination="4P8-Eu-ar0" id="nZT-vp-eKE"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="361" height="347"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="6dk-co-h2A">
+                    <rect key="frame" x="0.0" y="0.0" width="361" height="347"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CND-hH-EVV">
+                            <rect key="frame" x="0.0" y="0.0" width="361" height="24"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="SMG-CI-unQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="143.33333333333334" height="24"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Competitors" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iy9-JD-Yrc">
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" name="MainDarkColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dot" translatesAutoresizingMaskIntoConstraints="NO" id="JAT-7g-3Xl">
+                                            <rect key="frame" x="103" y="0.0" width="12" height="24"/>
+                                            <color key="tintColor" name="MainDarkColor"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oQ-Hn-RXo">
+                                            <rect key="frame" x="118.99999999999999" y="0.0" width="24.333333333333329" height="24"/>
+                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                            <color key="textColor" systemColor="systemGray2Color"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVA-Og-RsR" userLabel="Collapse Button">
+                                    <rect key="frame" x="337" y="0.0" width="24" height="24"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="24" id="h0p-Wb-KrZ"/>
+                                    </constraints>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" image="Exhbt-chevron-bottom"/>
+                                    <connections>
+                                        <action selector="didTapCollapse:" destination="-1" eventType="touchUpInside" id="0Hm-G5-DJB"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="SMG-CI-unQ" secondAttribute="bottom" id="4xX-T8-tYJ"/>
+                                <constraint firstAttribute="bottom" secondItem="TVA-Og-RsR" secondAttribute="bottom" id="782-fq-Ots"/>
+                                <constraint firstItem="TVA-Og-RsR" firstAttribute="top" secondItem="CND-hH-EVV" secondAttribute="top" id="UqW-09-5Hk"/>
+                                <constraint firstItem="SMG-CI-unQ" firstAttribute="leading" secondItem="CND-hH-EVV" secondAttribute="leading" id="Z3R-ev-39s"/>
+                                <constraint firstAttribute="height" constant="24" id="Zhy-9m-2Rp"/>
+                                <constraint firstAttribute="trailing" secondItem="TVA-Og-RsR" secondAttribute="trailing" id="mJ8-ct-yqR"/>
+                                <constraint firstItem="SMG-CI-unQ" firstAttribute="top" secondItem="CND-hH-EVV" secondAttribute="top" id="qQN-LR-wlz"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z0N-uC-xkh" userLabel="Competitors View">
+                            <rect key="frame" x="0.0" y="32" width="361" height="50"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-Sk-8Xb" customClass="HorizontalCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="11" width="361" height="28"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="28" id="ef3-9d-vUK"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="D7c-Sk-8Xb" firstAttribute="leading" secondItem="z0N-uC-xkh" secondAttribute="leading" id="6K0-Zx-StE"/>
+                                <constraint firstItem="D7c-Sk-8Xb" firstAttribute="centerY" secondItem="z0N-uC-xkh" secondAttribute="centerY" id="LwN-ej-U2a"/>
+                                <constraint firstAttribute="trailing" secondItem="D7c-Sk-8Xb" secondAttribute="trailing" id="PEh-dn-MV8"/>
+                                <constraint firstAttribute="height" constant="50" id="vcU-l9-6Cw"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4P8-Eu-ar0">
+                            <rect key="frame" x="0.0" y="90" width="361" height="213"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="naV-OA-4Hi" userLabel="Accepted View" customClass="VerticalCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="361" height="141"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7m4-Om-Std" userLabel="Pending View" customClass="VerticalCompetitorsView" customModule="Exhbt" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="149" width="361" height="64"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XpX-uK-MgK">
+                            <rect key="frame" x="0.0" y="311" width="361" height="36"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Bx-Mh-khE">
+                                    <rect key="frame" x="0.0" y="0.0" width="180.66666666666666" height="36"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="filled" title="Invite Competitors" cornerStyle="medium">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="didTapInvite:" destination="-1" eventType="touchUpInside" id="e1c-hK-HZo"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="centerX" secondItem="7Bx-Mh-khE" secondAttribute="trailing" id="S01-nF-JLn"/>
+                                <constraint firstItem="7Bx-Mh-khE" firstAttribute="top" secondItem="XpX-uK-MgK" secondAttribute="top" id="Sgh-ch-Ujv"/>
+                                <constraint firstItem="7Bx-Mh-khE" firstAttribute="leading" secondItem="XpX-uK-MgK" secondAttribute="leading" id="UnW-Rx-Yfg"/>
+                                <constraint firstAttribute="bottom" secondItem="7Bx-Mh-khE" secondAttribute="bottom" id="hbc-75-nMG"/>
+                                <constraint firstAttribute="height" constant="36" id="y1G-We-7QK"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6dk-co-h2A" secondAttribute="trailing" id="7DI-Ok-nDK"/>
+                <constraint firstItem="6dk-co-h2A" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IAd-zH-mVS"/>
+                <constraint firstAttribute="bottom" secondItem="6dk-co-h2A" secondAttribute="bottom" id="j8f-HQ-2TP"/>
+                <constraint firstItem="6dk-co-h2A" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="x8l-4E-ZDg"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-90.839694656488547" y="-128.52112676056339"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Dot" width="12" height="12"/>
+        <image name="Exhbt-chevron-bottom" width="13.666666984558105" height="8"/>
+        <namedColor name="MainDarkColor">
+            <color red="0.16078431372549021" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MissingAccountDetailsViewController" customModule="Exhbt" customModuleProvider="target">
+            <connections>
+                <outlet property="addPhotoButton" destination="ddJ-2r-9ue" id="bM1-yp-Ziu"/>
+                <outlet property="createAccountButton" destination="3RQ-28-iSH" id="68n-a0-jfr"/>
+                <outlet property="profilePhotoImageView" destination="axg-qa-ilY" id="HzP-Bu-rbf"/>
+                <outlet property="stackView" destination="dsq-m7-vuU" id="1Wo-jC-zqP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dsq-m7-vuU">
+                    <rect key="frame" x="118.33333333333333" y="79" width="156.66666666666669" height="122.33333333333331"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="axg-qa-ilY" customClass="CircleImageView" customModule="Exhbt" customModuleProvider="target">
+                            <rect key="frame" x="38.333333333333329" y="0.0" width="80" height="80"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="80" id="w0Y-c3-tC2"/>
+                                <constraint firstAttribute="height" constant="80" id="zg6-d9-H6K"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" name="BlueGradientButtonRightColor"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddJ-2r-9ue">
+                            <rect key="frame" x="0.0" y="88" width="156.66666666666666" height="34.333333333333343"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Add Profile Photo"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Add Profile Photo">
+                                <color key="baseForegroundColor" systemColor="systemBlueColor"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapAddPhoto:" destination="-1" eventType="touchUpInside" id="ECO-85-M2x"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3RQ-28-iSH" customClass="FilledButton" customModule="Exhbt" customModuleProvider="target">
+                    <rect key="frame" x="24" y="764" width="345" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="3vy-sj-arP"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Create Account"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Create Account"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="didTapCreate:" destination="-1" eventType="touchUpInside" id="fig-3J-76x"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="3RQ-28-iSH" secondAttribute="trailing" constant="24" id="66a-ER-JYk"/>
+                <constraint firstItem="dsq-m7-vuU" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="YOr-ai-Xi1"/>
+                <constraint firstItem="3RQ-28-iSH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="24" id="coM-U3-tvP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="3RQ-28-iSH" secondAttribute="bottom" constant="4" id="sYe-n8-qN0"/>
+                <constraint firstItem="dsq-m7-vuU" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="y8E-sq-b64"/>
+            </constraints>
+            <point key="canvasLocation" x="10" y="31"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="3RQ-28-iSH">
+            <size key="intrinsicContentSize" width="166.33333333333334" height="36.333333333333336"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="BlueGradientButtonRightColor">
+            <color red="0.38039215686274508" green="0.77647058823529413" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="VotingThumbnailCollectionViewCell" id="gTV-IL-0wX" customClass="VotingThumbnailCollectionViewCell" customModule="Exhbt" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="273" height="333"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="273" height="333"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ePB-jv-AQq">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="333"/>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Vote Style 1" translatesAutoresizingMaskIntoConstraints="NO" id="iTT-eD-8g7">
+                        <rect key="frame" x="127.66666666666669" y="316" width="18" height="13"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="13" id="jS2-Zc-qHq"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3aE-Ec-V93">
+                        <rect key="frame" x="0.0" y="0.0" width="273" height="333"/>
+                        <color key="backgroundColor" name="TitleBackgroundWithOpacity"/>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="3aE-Ec-V93" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="1iB-OW-e4j"/>
+                <constraint firstAttribute="trailing" secondItem="3aE-Ec-V93" secondAttribute="trailing" id="51v-Je-xBO"/>
+                <constraint firstItem="ePB-jv-AQq" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="7nG-KG-yfu"/>
+                <constraint firstItem="3aE-Ec-V93" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="HP0-Z2-rSZ"/>
+                <constraint firstAttribute="trailing" secondItem="ePB-jv-AQq" secondAttribute="trailing" id="JD1-Xl-bSM"/>
+                <constraint firstItem="iTT-eD-8g7" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="cq3-Jk-xvY"/>
+                <constraint firstAttribute="bottom" secondItem="ePB-jv-AQq" secondAttribute="bottom" id="grp-xN-UdC"/>
+                <constraint firstAttribute="bottom" secondItem="iTT-eD-8g7" secondAttribute="bottom" constant="4" id="pto-3Y-WUK"/>
+                <constraint firstAttribute="bottom" secondItem="3aE-Ec-V93" secondAttribute="bottom" id="s8Q-to-jEh"/>
+                <constraint firstItem="ePB-jv-AQq" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xXq-LF-zo7"/>
+            </constraints>
+            <size key="customSize" width="273" height="333"/>
+            <connections>
+                <outlet property="coverView" destination="3aE-Ec-V93" id="Jx6-UA-Yn2"/>
+                <outlet property="imageView" destination="ePB-jv-AQq" id="3O1-7V-Y8S"/>
+                <outlet property="thumbImageView" destination="iTT-eD-8g7" id="kaO-ss-utl"/>
+            </connections>
+            <point key="canvasLocation" x="196.18320610687022" y="119.36619718309859"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="Vote Style 1" width="18.333333969116211" height="19"/>
+        <namedColor name="TitleBackgroundWithOpacity">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.47999998927116394" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
